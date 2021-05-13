@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'mixins';
+
+.login {
+  & .pic {
+    padding: 15px;
+    background: $color-gray--light;
+    border-radius: 99%;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+  }
+
+  button {
+    border-radius: 25px;
+  }
+
+  [data-testid='sign-in'] {
+    @include transitions();
+    background: $color-accent;
+    color: $color-white;
+
+    &:hover {
+      background: $color-primary;
+      @include scale(1.2);
+    }
+  }
+
+  [variant='googleSignInButton'] {
+    @include transitions;
+
+    &:hover {
+      background: $color-gray--light;
+      @include scale(1.2);
+      border-color: $color-accent;
+    }
+  }
+}
+

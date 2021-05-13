@@ -1,0 +1,209 @@
+@import "colors";
+@import "mixins";
+
+div[class*="-light"] {
+  &:first-child {
+    background: $color-gray--light !important;
+  }
+
+  & * {
+    @include getColor($color-primary);
+  }
+
+  & a:hover,
+  span:hover {
+    color: $color-accent !important;
+  }
+
+  & {
+    .card-section {
+      padding-top: 2em;
+
+      & .card-widget {
+        background: none !important;
+        box-shadow: none !important;
+
+        & .title {
+          @include animate();
+          border-radius: 50px;
+          display: block !important;
+          font-size: 1.3em !important;
+          margin-bottom: 75px !important;
+          margin-top: 25px !important;
+          padding: 10px 25px !important;
+          width: auto !important;
+          background: $color-gray--dark !important;
+
+          &::before {
+            color: $color-accent;
+            content: "❯";
+            font-weight: lighter !important;
+            margin-right: 5px !important;
+          }
+        }
+
+        & .content {
+          @include animate();
+          & ul {
+            margin-bottom: 75px !important;
+
+            & * {
+              background: none !important;
+            }
+
+            & li {
+              border-top: 1px solid $color-secondary;
+
+              &::first-child {
+                border: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .makeStyles-gridPageIntro-435 {
+    & h3 {
+      &::before {
+        color: $color-accent;
+        content: "❯";
+        font-weight: lighter !important;
+        margin-right: 5px !important;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & header {
+      width: 100%;
+      background: none !important;
+    }
+  }
+
+  & .dataview {
+    width: 100% !important;
+    & h3 {
+      @include animate();
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      &::before {
+        color: $color-accent;
+        content: "❯";
+        font-weight: lighter !important;
+        margin-right: 5px !important;
+      }
+    }
+  }
+
+  & .refresh-control-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  & .visualization-selector-container {
+    margin-bottom: 50px !important;
+  }
+
+  & .context-menu-button {
+    & .cell {
+      @include animate();
+      padding: 5px 20px;
+      border-radius: 25px;
+      border: 1px solid $color-accent;
+      background: none !important;
+      color: $color-accent !important;
+    }
+  }
+
+  & .container-nav-left {
+    @include transitions();
+
+    & div {
+      background: none;
+      box-shadow: none;
+      border: none;
+    }
+
+    & span {
+      @include getColor($color-gray--light);
+      padding: 0.7em 0.5em;
+    }
+
+    & .MuiListItem-button {
+      margin-bottom: 1px;
+      border-radius: 25px 0 0 25px;
+
+      &:hover {
+        background: $color-gray--light !important;
+        color: $color-accent !important;
+
+        & svg {
+          color: $color-accent !important;
+          @include scale(1.2);
+        }
+      }
+    }
+
+    & .active {
+      border: none !important;
+      background: $color-gray--light !important;
+
+      & span,
+      & svg {
+        color: $color-accent !important;
+      }
+    }
+
+    & .MuiDrawer-root {
+      background: $color-secondary !important;
+    }
+
+    & header {
+      background: none;
+
+      & div[class*="appBarContent"] {
+        & div {
+          @include getColor($color-gray--light);
+        }
+      }
+
+      & .MuiAvatar-img {
+        padding: 2px;
+        background: $color-gray--light;
+        border-radius: 99%;
+        margin: auto;
+      }
+    }
+
+    & button {
+      background: $color-primary !important;
+      border-radius: 25px;
+      padding: 2px;
+      margin: 10px;
+      margin-top: -20px;
+
+      &:hover {
+        background: $color-accent !important;
+      }
+      & svg {
+        color: $color-gray--light !important;
+      }
+
+      & .MuiButton-label {
+        padding: 0.1em;
+        margin: 0;
+      }
+
+      & span,
+      svg {
+        color: $color-accent !important;
+        padding: 0.1em;
+      }
+    }
+  }
+}
